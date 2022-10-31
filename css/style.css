@@ -17,7 +17,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
   border-radius: 5px;
 }
@@ -87,6 +87,23 @@ img {
 }
 .header li + li { /* li após li */
   margin-left: 30px;
+}
+/* Header Responsivo */
+@media (max-width: 389px) {
+  .header nav li a {
+    margin-left: 0px;
+    padding: 8px;
+  }
+  .header nav ul {
+    margin-left: -15px;
+    width: 320px;
+  }
+  .caracteristicas > div:first-child {
+    margin-right: 10px !important;
+  }
+  .caracteristicas > div:nth-child(2) {
+    margin-right: 10px !important;
+  }
 }
 
 /* Modo Responssivo Header */
@@ -185,6 +202,12 @@ img {
 .imagem-2 {
   align-self: end;
 }
+/* Content Responsivo */
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}
 
 /* Estilos Content */
 p {
@@ -229,6 +252,9 @@ p {
   position: relative;
 }
 .caracteristicas > div:first-child {
+  margin-right: 30px;
+}
+.caracteristicas > div:nth-child(2) {
   margin-right: 30px;
 }
 .numero {
@@ -286,6 +312,7 @@ p {
   align-content: start;
   padding: 30px;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* Rodapé */
